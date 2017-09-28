@@ -474,7 +474,7 @@ component accessors="true"{
 		// recurse default
 		arguments.directory.recurse = ( structKeyExists( arguments.directory, "recurse" ) ? arguments.directory.recurse : true );
 		// clean up paths
-		var bundleExpandedPath 	= expandPath( "/" & replace( arguments.directory.mapping, ".", "/", "all" ) );
+		var bundleExpandedPath 	= expandPath( replace( arguments.directory.mapping, ".", "/", "all" ) );
 		bundleExpandedPath 		= replace( bundleExpandedPath, "\", "/", "all" );
 		// search directory with filters
 		var bundlesFound 		= directoryList( bundleExpandedPath, arguments.directory.recurse, "path", "*.cfc", "asc" );
